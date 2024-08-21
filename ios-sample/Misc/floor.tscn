@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://l3awy8ik12cq"]
+
+[ext_resource type="Material" uid="uid://bpo31b6mor6l3" path="res://Materials/Green.tres" id="1_nrhcs"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_swr8e"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vkqdp"]
+size = Vector2(20, 20)
+
+[node name="Floor" type="AnimatableBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("WorldBoundaryShape3D_swr8e")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_nrhcs")
+mesh = SubResource("PlaneMesh_vkqdp")

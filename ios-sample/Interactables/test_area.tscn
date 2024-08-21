@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbft8sbx1pv4q"]
+
+[ext_resource type="Material" uid="uid://ddcydhghm3ca8" path="res://Materials/Transparent.tres" id="1_88efm"]
+[ext_resource type="Script" path="res://Interactables/PlayerOverlapArea.gd" id="2_5i3wm"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_hiufv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k32wy"]
+size = Vector3(1.5, 1, 1.5)
+
+[node name="TestArea" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_88efm")
+mesh = SubResource("SphereMesh_hiufv")
+
+[node name="PlayerOverlapArea" type="Area3D" parent="."]
+script = ExtResource("2_5i3wm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerOverlapArea"]
+shape = SubResource("BoxShape3D_k32wy")
+
+[connection signal="area_entered" from="PlayerOverlapArea" to="PlayerOverlapArea" method="_on_area_entered"]

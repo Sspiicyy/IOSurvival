@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv04c2aqugpjl"]
+
+[ext_resource type="PackedScene" uid="uid://bqxx8yve1tf7s" path="res://PlayerCharacter/test_player.tscn" id="2_2r0io"]
+[ext_resource type="PackedScene" uid="uid://l3awy8ik12cq" path="res://Misc/floor.tscn" id="2_l8ifa"]
+[ext_resource type="PackedScene" uid="uid://bbft8sbx1pv4q" path="res://Interactables/test_area.tscn" id="3_rgn10"]
+[ext_resource type="PackedScene" uid="uid://tdsl7h4cff37" path="res://TouchControls/touch_controls.tscn" id="4_sv63w"]
+
+[node name="Main" type="Node3D"]
+
+[node name="TestPlayer" parent="." instance=ExtResource("2_2r0io")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.73015, 0)
+
+[node name="Floor" parent="." instance=ExtResource("2_l8ifa")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.707107, 1.94515e-08, 0.707107, -0.488849, 0.722533, 0.488849, -0.510908, -0.691337, 0.510908, 2.08165e-12, 8, 2.08165e-12)
+light_color = Color(0.270588, 0.431373, 1, 1)
+light_energy = 2.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 3.0
+light_angular_distance = 45.0
+shadow_enabled = true
+shadow_opacity = 0.8
+shadow_blur = 6.0
+
+[node name="TestArea" parent="." instance=ExtResource("3_rgn10")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.59053, 1.54013, 0)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TouchControls" parent="UI" instance=ExtResource("4_sv63w")]
