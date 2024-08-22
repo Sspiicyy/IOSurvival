@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://hqknd8fwaw2c"]
+[gd_scene load_steps=3 format=3 uid="uid://hqknd8fwaw2c"]
+
+[ext_resource type="Texture2D" uid="uid://bcf4dioxk3aiu" path="res://TouchControls/Images/Knob.png" id="1_iks8j"]
+[ext_resource type="Texture2D" uid="uid://bpurhwu03xmnd" path="res://TouchControls/Images/Boundry.png" id="2_h77wx"]
 
 [node name="Joystick" type="Node2D"]
+
+[node name="Knob" type="Sprite2D" parent="."]
+texture = ExtResource("1_iks8j")
+
+[node name="Boundry" type="Sprite2D" parent="."]
+texture = ExtResource("2_h77wx")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -41.0
+offset_top = -41.0
+offset_right = 41.0
+offset_bottom = 41.0

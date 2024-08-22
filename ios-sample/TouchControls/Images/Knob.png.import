@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjjxkck3732sq"
-path="res://.godot/imported/pixil-frame-0.png-6ea9e3ee830b5817325f81eea223d21d.ctex"
+uid="uid://bcf4dioxk3aiu"
+path="res://.godot/imported/Knob.png-91da64bf9f71ebeec46a588800baffdf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TouchControls/Images/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-6ea9e3ee830b5817325f81eea223d21d.ctex"]
+source_file="res://TouchControls/Images/Knob.png"
+dest_files=["res://.godot/imported/Knob.png-91da64bf9f71ebeec46a588800baffdf.ctex"]
 
 [params]
 
